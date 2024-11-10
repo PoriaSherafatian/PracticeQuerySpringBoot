@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: PracticeQuerySpringBoot
+  sql:
+    init:
+      mode: always
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.testcontainers: INFO
+
+server:
+  port: 7500
